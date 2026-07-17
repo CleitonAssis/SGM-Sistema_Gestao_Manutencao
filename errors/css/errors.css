@@ -1,0 +1,33 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /*height: 100%;
+  margin: 0;*/
+}
+
+.container {
+  width: 100%;
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.centralizar {
+  position: absolute;
+  top: 50%; /* centralizar a parte interna do preload (onde fica a animação)*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; 
+}
+
+.errorConexao {
+  font-size: 2.5rem;
+  position: relative;
+  color: red;
+  /*margin: auto -50% auto;*/
+}
+
+.icone {
+  width: 3.5rem;
+  margin-bottom: -8px;
+}
