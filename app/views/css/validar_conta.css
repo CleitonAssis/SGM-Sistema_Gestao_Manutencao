@@ -1,0 +1,81 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.validate-container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+/* Link tema */
+.link-tema {
+    /*margin-top: 15px;*/
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+/* Link com animação */
+.link-tema a {
+    position: relative;
+    color: #17a2b8;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover */
+.link-tema a:hover {
+    color: #138496;
+    /* info escuro */
+    transform: translateY(-2px);
+}
+
+/* Linha animada */
+.link-tema a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #17a2b8;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.link-tema a:hover::after {
+    width: 100%;
+}
+
+/* Ícone do sistema */
+.system-icon {
+    font-size: 8rem;
+}
+
+/* Iniciais SGM */
+.system-initials {
+    display: block;
+    margin-top: -10px;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    color: #17a2b8;
+    /* Bootstrap text-info */
+    text-transform: uppercase;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .system-icon {
+        font-size: 6rem;
+    }
+
+    .system-initials {
+        font-size: 2.2rem;
+        letter-spacing: 0.2rem;
+    }
+}

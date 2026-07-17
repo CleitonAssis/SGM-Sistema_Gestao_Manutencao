@@ -1,0 +1,134 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.password-container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+}
+
+/* Link tema */
+.link-tema {
+    /*margin-top: 15px;*/
+    color: #6c757d;
+    transition: color 0.3s ease;
+}
+
+/* Link com animação */
+.link-tema a {
+    position: relative;
+    color: #17a2b8;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover */
+.link-tema a:hover {
+    color: #138496;
+    /* info escuro */
+    transform: translateY(-2px);
+}
+
+/* Linha animada */
+.link-tema a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #17a2b8;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.link-tema a:hover::after {
+    width: 100%;
+}
+
+/* Ícone do sistema */
+.system-icon {
+    font-size: 8rem;
+}
+
+/* Iniciais SGM */
+.system-initials {
+    display: block;
+    margin-top: -10px;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    color: #17a2b8;
+    /* Bootstrap text-info */
+    text-transform: uppercase;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .system-icon {
+        font-size: 6rem;
+    }
+
+    .system-initials {
+        font-size: 2.2rem;
+        letter-spacing: 0.2rem;
+    }
+}
+
+/* Corrige a borda direita do input dentro do input-group */
+.input-group>.form-control {
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+}
+
+.form-control {
+    padding-right: 3.5rem;
+}
+
+/* Ícone padrão */
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+    z-index: 5;
+    transition: right 0.2s ease;
+}
+
+/* Hover */
+.toggle-password:hover {
+    color: #000;
+}
+
+/* Quando o input estiver inválido ou válido,
+empurra o ícone para a esquerda */
+.form-control.is-valid~.toggle-password,
+.form-control.is-invalid~.toggle-password {
+    right: 40px;
+    /* ajuste fino aqui se quiser */
+    top: 19px;
+}
+
+.icon-success {
+    color: #4CAF50;
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.icon-error {
+    color: #f44336;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    
+}
+
+.invalid-feedback {
+    display: none;
+}
